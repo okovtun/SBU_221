@@ -1,4 +1,4 @@
-#include<iostream>
+ï»¿#include<iostream>
 using namespace std;
 
 void main()
@@ -6,5 +6,5 @@ void main()
 	cout << "Hello World";
 }
 
-//Ctrl+F7 - Êîìïèëÿöèÿ
-//Ctrl+F5 - Çàïóñê
+//Ctrl+F7 - ÐšÐ¾Ð¼Ð¿Ð¸Ð»ÑÑ†Ð¸Ñ
+//Ctrl+F5 - Ð—Ð°Ð¿ÑƒÑÐº
