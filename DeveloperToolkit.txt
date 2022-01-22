@@ -3,3 +3,20 @@ Developer toolkit
    Aditor, Source editor, Notepad++, SublimeText;
 2. Компилятор (Compiler) - это программа, которая преобразует исходный код, 
    написанный программистом, в машинный код, понятный для процессора.
+3. Отладчик (Debugger) - это программа, которая позволяет пошагово выполнить 
+   нашу программу, чтобы найти в ней ОШИБКИ НА ЭТАПЕ ВЫПОЛНЕНИЯ, 
+   и ошибки в алгоритме нашей программы.
+4. Справочная система: 
+	http://cplusplus.com/doc/tutorial/
+	https://en.cppreference.com/w/
+	https://docs.microsoft.com/en-us/
+5. Система контроля версий и облачное хранилище исходных кодов: Git/GitHub.com
+
+IDE - Integrated Development Environment
+	  (Интегрированная среда разработки)
+NetBeans, Eclipse, Xcode(MacOS), QtCreator
+Visual Studio, RAD studio.
+
+devenv
+
+(Development Environment)
