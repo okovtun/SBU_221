@@ -10,5 +10,7 @@ TODO:
 1. В окно консоли вывести стишок "В лесу родилась Ёлочка".
    Стишок должен быть выровнен по середине окна консоли,
    и его куплеты должны быть отделены пустой строкой;
+2. Изучить типы данных и операторы:	https://github.com/okovtun/SBU_221/blob/master/DataTypes/DataTypes.pdf
+3. Почитать про системы счисления:	https://github.com/okovtun/SBU_221/blob/master/DataTypes/NumericSystems.pdf
 
 В MyStat прислать исполняемый файл программы - main.cpp или Source.cpp;
