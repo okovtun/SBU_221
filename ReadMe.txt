@@ -6,6 +6,13 @@ https://www.deepl.com/ru/translator
 https://docs.microsoft.com/ru-ru/cpp/c-language/escape-sequences?view=msvc-170
 
 TODO:
+1. Проработать с примерами в конспекте начиная от "Имя переменной", заканчивая "Управляющие структуры"
+	https://github.com/okovtun/SBU_221/blob/master/DataTypes/DataTypes.pdf
+2. Решить все задачи из файла:https://github.com/okovtun/SBU_221/blob/master/DataTypes/VariablesTask.pdf
+	Для того чтобы ввести значение переменной с клавиатуры используем:
+	cin >> имя_переменной;
+
+DONE:
 0. Выучить теорию;
 1. В окно консоли вывести стишок "В лесу родилась Ёлочка".
    Стишок должен быть выровнен по середине окна консоли,

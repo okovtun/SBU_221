@@ -6,8 +6,9 @@ void main()
 	setlocale(LC_ALL, "Russian");
 	cout << "\n";
 	cout << endl;	//end line
-	cout << "\t\t\t\tHello \"World\"\n";
-	cout << "\nПривет Мир!\n";
+	cout << "Hello \"World\"";
+	//cout << "\t\t\t\tHello \"World\"\n";
+	cout << "Привет Мир!\n";
 	cout << endl;
 	cout << "C:\\Windows\\System32\\drivers\\\n";
 }
