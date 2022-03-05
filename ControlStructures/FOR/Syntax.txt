@@ -1,0 +1,10 @@
+
+for(counter; condition; expression)
+{
+	....
+	group-of-statements;
+	....
+}
+counter - 
+condition - 
+expression - 
