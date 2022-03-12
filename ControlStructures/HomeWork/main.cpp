@@ -1,48 +1,122 @@
-#include<iostream>
-#include<conio.h>
-//using namespace std;
-using std::cin;
-using std::cout;
-using std::endl;;
+#include <iostream>
+#include<string>
+using namespace std;
 
-//#define PALINDROME
+#define arrowPointer " -> "
+#define doubleTab " \t\t "
+#define inputError " Не корректное значение "
+#define InputValue " Введите числовое значение:  "
 
-void main()
+void Task_1()
 {
-	setlocale(LC_ALL, "");
-#ifdef PALINDROME
-	int number;		//число, вводимое с клавиатуры
-	int reverse = 0;	//обратная запись введенного числа
-	cout << "Введите число: "; cin >> number;
-	int buffer = number;
-	while (buffer)
+	int value;
+	int temp = 0;
+	int temp2 = 1;
+	int temp3 = 0;
+	cout << doubleTab << "Факториал числа (Задание №1)." << endl;
+	cout << InputValue << arrowPointer;
+	cin >> value;
+
+	while (true)
 	{
-		reverse *= 10;	//освобождаем место под младший разряд
-		reverse += buffer % 10;//получаем младший разряд числа, и сохраняем его
-		buffer /= 10;	//убираем сохраненный разряд
+		temp3 = temp + temp2;
+		temp = temp2;
+		temp2 = temp3;
+		if (temp3 <= value)
+		{
+			cout << temp3 << doubleTab;
+		}
+		else
+		{
+			break;
+		}
+
 	}
-	cout << number << endl;
-	cout << reverse << endl;
-	if (number == reverse)
+
+	cout << endl << "Выведен ряд Фибоначчи до указанонго пользователем числа" << endl;
+}
+
+void Task_2()
+{
+	int result = 0;
+	cout << doubleTab << "Таблица умножения (Задание №2)." << endl;
+	for (int i = 1; i <= 9; i++)
 	{
-		cout << "Число палиндром" << endl;
+
+		for (int j = 1; j <= 10; j++)
+		{
+			result = i * j;
+			cout << i << " * " << j << " = " << result << endl;
+		}
+
+		cout << endl;
+	}
+}
+
+void Task_3()
+{
+	int result = 0;
+	cout << doubleTab << "Таблица Пифагора (Задание №3)." << "\n" << "\n";
+	for (int i = 1; i <= 9; i++)
+	{
+
+		for (int j = 1; j < 10; j++)
+		{
+			result = i * j;
+
+			if (result >= 10)
+			{
+				cout << result << "|";
+			}
+			else
+			{
+				cout << " " << result << "|";
+			}
+		}
+
+		cout << endl;
+	}
+}
+
+
+void TaskEnd()
+{
+	cout << "Программа завершилась!";
+}
+
+void TaskSelection()
+{
+	string numberOfTask;
+	cout << endl << doubleTab << "Введите номер домашнего задания для проверки, от 1 до 4, введите q для выхода" << arrowPointer;
+	cin >> numberOfTask; cout << endl;
+	if (numberOfTask == "1")
+	{
+		Task_1();
+		TaskSelection();
+	}
+	else if (numberOfTask == "2")
+	{
+		Task_2();
+		TaskSelection();
+	}
+	else if (numberOfTask == "3")
+	{
+		Task_3();
+		TaskSelection();
+	}
+	else if (numberOfTask == "q")
+	{
+		TaskEnd();
 	}
 	else
 	{
-		cout << "Число НЕ палиндром" << endl;
+		cout << inputError << endl;
+		TaskSelection();
 	}
-#endif
+}
 
-	char key;	//код клавиши
-	do
-	{
-		key = _getch();
-		cout << (int)key << "\t" << key << endl;
-		if (key == 'w' || key == 'W')cout << "Вперед" << endl;
-		else if (key == 's' || key == 'S')cout << "Назад" << endl;
-		else if (key == 'a' || key == 'A')cout << "Влево" << endl;
-		else if (key == 'd' || key == 'D')cout << "Вправо" << endl;
-		else if (key == 32)cout << "Прыжок" << endl;
-		else cout << "Error: нет такого действия" << endl;
-	} while (key != 27);
+int main()
+{
+	setlocale(LC_ALL, "ru");
+	TaskSelection();
 }
