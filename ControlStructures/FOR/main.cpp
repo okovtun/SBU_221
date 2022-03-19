@@ -3,10 +3,12 @@ using namespace std;
 
 //#define FOR_SYNTAX
 //#define FACTORIAL
+//#define POWER
+//#define ASCII
 
 void main()
 {
-	setlocale(LC_ALL, "");
+	setlocale(LC_ALL, "Russian");
 #ifdef FOR_SYNTAX
 	int n;	//количество итераций
 	cout << "Введите количество итераций: "; cin >> n;
@@ -33,6 +35,7 @@ void main()
 	cout << endl;
 #endif // FACTORIAL
 
+#ifdef POWER
 	double a;	//Основание степени
 	int n;	//Показатель степени
 	double N = 1;	//Степень
@@ -50,4 +53,19 @@ void main()
 		//N = a * N;
 	}
 	cout << N << endl;
+#endif // POWER
+
+#ifdef ASCII
+	cout << "Таблица ASCII-символов:\n";
+	setlocale(LC_ALL, "C");	//Устанавливает кодировку по умолчанию
+	for (int i = 0; i < 256; i++)
+	{
+		if (i % 16 == 0)cout << endl;
+		cout << (char)i << " ";
+	}
+	cout << endl;
+	setlocale(LC_ALL, "Rus");
+	cout << "Вот и сказочке конец" << endl;
+#endif // ASCII
+
 }
