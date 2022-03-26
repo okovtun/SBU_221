@@ -7,6 +7,14 @@ https://4pda.to/forum/index.php?showtopic=973831
 https://docs.microsoft.com/ru-ru/cpp/c-language/escape-sequences?view=msvc-170
 
 TODO:
+Вывести остальные фигуры:
+1. https://github.com/okovtun/BV_011/blob/master/ControlStructures/Geometria/Task/Geometria1.txt
+-------------------------------
+2. Десятичное число, введенное с клавиатуры перевести в двоичную, 
+   восьмеричную и шестнадцатеричную системы счисления.
+http://cplusplus.com/doc/tutorial/arrays/
+
+DONE:
 1. Написать программу, которая вычисляет факториал числа, введенного с клавиатуры:
 	5! = 1*2*3*4*5 = 120;	DONE
 2. Написать программу, которая возводит число в степень. Основание и показатель степени вводятся с клавиатуры; DONE
