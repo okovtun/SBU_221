@@ -1,0 +1,15 @@
+Version Control System (VCS)
+SVN
+Sumbversion
+Mercury
+.....
+.....
+Git, GitHub
+Git - система контроля версий
+GitHub - облачное хранилище исходных кодов
+
+Repository - это хранилище исходных кодов.
+remote		push, pull и fetch
+
+commit - это контрольная точка, в которую схраняются 
+снимки файлов репозитория, в определенный момент времени.
