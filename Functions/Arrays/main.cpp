@@ -23,6 +23,7 @@ void main()
 	shiftLeft(arr, n, number_of_shifts);
 	Print(arr, n);
 
+
 	const int SIZE = 8;
 	int brr[SIZE];
 	FillRand(brr, SIZE);
