@@ -9,7 +9,7 @@ using namespace std;
 const int ROWS = 3;
 const int COLS = 5;
 
-void FillRand(int arr[], const int n);
+void FillRand(int arr[], const int n, int minRand = 0, int maxRand = 100);
 void FillRand(double arr[], const int n);
 void FillRand(char arr[], const int n);
 void FillRand(int arr[ROWS][COLS], const int ROWS, const int COLS);
@@ -74,12 +74,12 @@ void main()
 	FillRand(arr2, ROWS, COLS);
 	Print(arr2, ROWS, COLS);
 }
-void FillRand(int arr[], const int n)
+void FillRand(int arr[], const int n, int minRand, int maxRand)
 {
 	//Заполнение массива случайными числами:
 	for (int i = 0; i < n; i++)
 	{
-		arr[i] = rand() % 100;
+		arr[i] = rand() % (maxRand - minRand) + minRand;
 	}
 }
 
