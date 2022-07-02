@@ -18,8 +18,8 @@ void FillRand(double** arr, const int rows, const int cols);
 template<typename T>void Print(T arr[], const int n);
 template<typename T>void Print(T** arr, const int rows, const int cols);
 
-template<typename T>T* push_back(T arr[], int& n, int value);
-template<typename T>T* push_front(T* arr, int& n, int value);
+template<typename T>T* push_back(T arr[], int& n, T value);
+template<typename T>T* push_front(T* arr, int& n, T value);
 template<typename T>T* pop_back(T* arr, int& n);
 template<typename T>T* pop_front(T* arr, int& n);
 
@@ -195,7 +195,7 @@ template<typename T>void Print(T** arr, const int rows, const int cols)
 	cout << endl;
 }
 
-template<typename T>T* push_back(T arr[], int& n, int value)
+template<typename T>T* push_back(T arr[], int& n, T value)
 {
 	//1) Создаем буферный массив:
 	T* buffer = new T[n + 1]{};
@@ -219,7 +219,7 @@ template<typename T>T* push_back(T arr[], int& n, int value)
 	//		Mission complete!
 	return arr;
 }
-template<typename T>T* push_front(T* arr, int& n, int value)
+template<typename T>T* push_front(T* arr, int& n, T value)
 {
 	T* buffer = new T[n + 1]{};
 	for (int i = 0; i < n; i++)
