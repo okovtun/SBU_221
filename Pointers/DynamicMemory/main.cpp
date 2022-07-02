@@ -20,6 +20,8 @@ int* pop_back(int* arr, int& n);
 int* pop_front(int* arr, int& n);
 
 int** push_row_down(int** arr, int& rows, const int cols);
+int** pop_row_down(int** arr, int& rows, const int cols);
+
 void push_col_right(int** arr, const int rows, int& cols);
 
 //#define DYNAMIC_MEMORY_1
@@ -68,6 +70,10 @@ void main()
 	Print(arr, rows, cols);
 
 	push_col_right(arr, rows, cols);
+	Print(arr, rows, cols);
+
+	cout << "Удаление последней строки:\n";
+	arr = pop_row_down(arr, rows, cols);
 	Print(arr, rows, cols);
 
 	Clear(arr, rows);
@@ -209,6 +215,14 @@ int** push_row_down(int** arr, int& rows, const int cols)
 	//6) После добавления строки, количество строк массива увеличивается на одну:
 	rows++;
 	return arr;
+}
+int** pop_row_down(int** arr, int& rows, const int cols)
+{
+	delete[] arr[rows-1];
+	int** buffer = new int*[--rows] {};
+	for (int i = 0; i < rows; i++)buffer[i] = arr[i];
+	delete[] arr;
+	return buffer;
 }
 void push_col_right(int** arr, const int rows, int& cols)
 {

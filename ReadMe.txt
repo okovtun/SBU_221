@@ -6,6 +6,8 @@ https://4pda.to/forum/index.php?showtopic=973831
 
 https://docs.microsoft.com/ru-ru/cpp/c-language/escape-sequences?view=msvc-170
 
+some men interpret nine memos
+
 TODO:
 1. Есть массив из 10 элементов заполненный случайными числами.
    Необходимо созать еще два массива even[] и odd[] МИНИМАЛЬНО ВОЗМОЖНОГО РАЗМЕРА,
