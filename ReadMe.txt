@@ -42,7 +42,7 @@ TODO:
 
 TODO strings:
 В проекте NULLTerminatedLines реализовать следующие функции:
-	int StringLength(const char str[]);	//возвращает длину строки в символах
+	int StringLength(const char str[]);	//возвращает длину строки в символах	DONE
 	void to_upper(char str[]);			//переводит строку в верхний регистр
 	void to_lower(char str[]);			//переводит строку в нижний регистр
 	void shrink(char str[]);	//Удаляет лишние пробелы из предложения
