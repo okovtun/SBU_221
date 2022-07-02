@@ -18,8 +18,8 @@ void FillRand(double** arr, const int rows, const int cols);
 template<typename T>void Print(T arr[], const int n);
 template<typename T>void Print(T** arr, const int rows, const int cols);
 
-template<typename T>T* push_back(T arr[], int& n, int value);
-template<typename T>T* push_front(T* arr, int& n, int value);
+template<typename T>T* push_back(T arr[], int& n, T value);
+template<typename T>T* push_front(T* arr, int& n, T value);
 template<typename T>T* pop_back(T* arr, int& n);
 template<typename T>T* pop_front(T* arr, int& n);
 
@@ -195,7 +195,7 @@ template<typename T>void Print(T** arr, const int rows, const int cols)
 	cout << endl;
 }
 
-template<typename T>T* push_back(T arr[], int& n, int value)
+template<typename T>T* push_back(T arr[], int& n, T value)
 {
 	//1) Создаем буферный массив:
 	T* buffer = new T[n + 1]{};
@@ -219,7 +219,7 @@ template<typename T>T* push_back(T arr[], int& n, int value)
 	//		Mission complete!
 	return arr;
 }
-template<typename T>T* push_front(T* arr, int& n, int value)
+template<typename T>T* push_front(T* arr, int& n, T value)
 {
 	T* buffer = new T[n + 1]{};
 	for (int i = 0; i < n; i++)
@@ -249,6 +249,8 @@ template<typename T>T* pop_front(T* arr, int& n)
 
 template<typename T>T** push_row_down(T** arr, int& rows, const int cols)
 {
+	return push_back(arr, rows, new T[cols]{});
+	/*
 	//1) Создаем буферный массив указателей:
 	T** buffer = new T*[rows + 1]{};
 	//2) Копируем адреса строк из исходного массива указателей в буферный:
@@ -265,23 +267,27 @@ template<typename T>T** push_row_down(T** arr, int& rows, const int cols)
 	//6) После добавления строки, количество строк массива увеличивается на одну:
 	rows++;
 	return arr;
+	*/
 }
 template<typename T>T** pop_row_down(T** arr, int& rows, const int cols)
 {
 	delete[] arr[rows - 1];
-	T** buffer = new T*[--rows]{};
+	return pop_back(arr, rows);
+	/*T** buffer = new T*[--rows]{};
 	for (int i = 0; i < rows; i++)buffer[i] = arr[i];
 	delete[] arr;
-	return buffer;
+	return buffer;*/
 }
 template<typename T>void push_col_right(T** arr, const int rows, int& cols)
 {
 	for (int i = 0; i < rows; i++)
 	{
-		T* buffer = new T[cols + 1]{};
+		/*T* buffer = new T[cols + 1]{};
 		for (int j = 0; j < cols; j++)buffer[j] = arr[i][j];
 		delete[] arr[i];
-		arr[i] = buffer;
+		arr[i] = buffer;*/
+		arr[i] = push_back(arr[i], cols, T());//T() - значение по умолчанию для шаблонного типа
+		cols--;	//Компенсируем увеличение cols функцией push_back
 	}
 	cols++;
 }
